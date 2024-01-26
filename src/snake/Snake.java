@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package snake;
 
 import java.awt.Image;
@@ -26,19 +21,19 @@ public class Snake extends Sprite {
         rand = new Random();
         ran = rand.nextInt(4);
         switch(ran) {
-            case 0: //le
+            case 0: //down
                 velx = 0;
                 vely = 25;
                 break;
-            case 1: //fel
+            case 1: //up
                 velx = 0;
                 vely = -25;
                 break;
-            case 2: //jobb
+            case 2: //right
                 velx = 25;
                 vely = 0;
                 break;
-            case 3: //bal
+            case 3: //left
                 velx = -25;
                 vely = 0;
                 break;

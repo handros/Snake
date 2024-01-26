@@ -1,13 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package snake;
 
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Rectangle;
+
 /**
  *
  * @author Draker
@@ -36,14 +32,6 @@ public class Sprite {
         Rectangle otherRect = new Rectangle(other.x, other.y, other.width, other.height);        
         return rect.intersects(otherRect);
     }
-    
-//    public boolean emptySlot() {
-//        Rectangle rectLT = new Rectangle(x, y, width, height);
-//        Rectangle rectRT = new Rectangle(x+30, y, width, height);
-//        Rectangle rectLB = new Rectangle(x, y+30, width, height);
-//        Rectangle rectRB = new Rectangle(x+30, y+30, width, height);
-//        return rectLT.isEmpty() && rectRT.isEmpty() && rectLB.isEmpty() && rectRB.isEmpty();
-//    }
 
     public int getX() {
         return x;

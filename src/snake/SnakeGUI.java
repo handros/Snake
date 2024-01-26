@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package snake;
 
 import java.awt.Dimension;
@@ -22,17 +17,8 @@ import javax.swing.JMenuItem;
 public class SnakeGUI {
     private JFrame frame;
     private GameEngine gameArea;
-//    private HighScores highScores;
     
     public SnakeGUI() {
-//        try {
-//            highScores = new HighScores(10);
-//            System.out.println(highScores.getHighScores());
-////            highScores.putHighScore(gameArea.getPlayer(), gameArea.getPoints());
-//            System.out.println(highScores.getHighScores());
-//        } catch (SQLException ex) {
-//            Logger.getLogger(SnakeGUI.class.getName()).log(Level.SEVERE, null, ex);
-//        }
         frame = new JFrame("Snake");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         

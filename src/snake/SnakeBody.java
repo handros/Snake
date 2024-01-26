@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package snake;
 
 import java.awt.Image;
@@ -21,25 +16,22 @@ public class SnakeBody extends Sprite {
     
     public SnakeBody(int x, int y, int width, int height, Image image) {
         super(x, y, width, height, image);
-        
-//        velx = 0;
-//        vely = 0;
     }
     
     public void move(Snake snLead) {
-        if(snLead.getVely() == 0 && snLead.getVelx() > 0) { //jobbra
+        if(snLead.getVely() == 0 && snLead.getVelx() > 0) { //right move
             x = snLead.getX() - SNAKE_SIZE;
             y = snLead.getY();
         }
-        if(snLead.getVely() == 0 && snLead.getVelx() < 0) { //balra
+        if(snLead.getVely() == 0 && snLead.getVelx() < 0) { //left move
             x = snLead.getX() + SNAKE_SIZE;
             y = snLead.getY();
         }
-        if(snLead.getVely() > 0 && snLead.getVelx() == 0) { //le
+        if(snLead.getVely() > 0 && snLead.getVelx() == 0) { //down move
             x = snLead.getX();
             y = snLead.getY() - SNAKE_SIZE;
         }
-        if(snLead.getVely() < 0 && snLead.getVelx() == 0) { //fel
+        if(snLead.getVely() < 0 && snLead.getVelx() == 0) { //up move
             x = snLead.getX();
             y = snLead.getY() + SNAKE_SIZE;
         }
@@ -48,21 +40,21 @@ public class SnakeBody extends Sprite {
     }
     
     public void move(SnakeBody snLead) {
-        if(snLead.getVely() == 0 && snLead.getVelx() > 0) { //jobbra
-            x = snLead.getX()/* - SNAKE_SIZE*/;
+        if(snLead.getVely() == 0 && snLead.getVelx() > 0) { //right move
+            x = snLead.getX();
             y = snLead.getY();
         }
-        if(snLead.getVely() == 0 && snLead.getVelx() < 0) { //balra
-            x = snLead.getX()/* + SNAKE_SIZE*/;
+        if(snLead.getVely() == 0 && snLead.getVelx() < 0) { //left move
+            x = snLead.getX();
             y = snLead.getY();
         }
-        if(snLead.getVely() > 0 && snLead.getVelx() == 0) { //le
+        if(snLead.getVely() > 0 && snLead.getVelx() == 0) { //down move
             x = snLead.getX();
-            y = snLead.getY()/* - SNAKE_SIZE*/;
+            y = snLead.getY();
         }
-        if(snLead.getVely() < 0 && snLead.getVelx() == 0) { //fel
+        if(snLead.getVely() < 0 && snLead.getVelx() == 0) { //up move
             x = snLead.getX();
-            y = snLead.getY() /*+ SNAKE_SIZE*/;
+            y = snLead.getY();
         }
         velx = snLead.getVelx();
         vely = snLead.getVely();

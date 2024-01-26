@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package snake;
 
 import java.awt.Graphics;
@@ -35,10 +30,6 @@ public class GameEngine extends JPanel {
     private final int BRICK_SIZE = 50;
     
     private int points;
-//    private String player;
-//    private HighScore hs;
-    
-//    private JTextField playerName;
     
     private boolean over;
     private boolean paused = false;
@@ -58,11 +49,8 @@ public class GameEngine extends JPanel {
         over = false;
         snakeB  = new ArrayList<>();
         
-//        foodCoords = new int[10][2]; //?
         bricks = new ArrayList<>();
         rand = new Random();
-        
-//        playerName = new JTextField(50);
         
         background = new ImageIcon("data/background.jpg").getImage();
         this.getInputMap().put(KeyStroke.getKeyStroke("LEFT"), "pressed left");
@@ -156,26 +144,6 @@ public class GameEngine extends JPanel {
         }
     }
     
-//    public void giveFoodCoords() {
-//        foodCoords[0][0] = 50;
-//        foodCoords[0][1] = 50;
-//        
-//        foodCoords[1][0] = 120;
-//        foodCoords[1][1] = 130;
-//        
-//        foodCoords[2][0] = 85;
-//        foodCoords[2][1] = 520;
-//        
-//        foodCoords[3][0] = 450;
-//        foodCoords[3][1] = 85;
-//        
-//        foodCoords[4][0] = 700;
-//        foodCoords[4][1] = 450;
-//        
-//        foodCoords[5][0] = 500;
-//        foodCoords[5][1] = 450;
-//    }
-    
     public void generateFood() {
         int x, y;
         boolean noBrick = false;
@@ -230,15 +198,6 @@ public class GameEngine extends JPanel {
         bricks.add(new Brick(625, 450, BRICK_SIZE, BRICK_SIZE, brickImage));
         bricks.add(new Brick(500, 75, BRICK_SIZE, BRICK_SIZE, brickImage));
     }
-    
-    
-//    public boolean isOver() {
-//        if(over) {
-//            //kiírás
-//            return true;
-//        }
-//        return false;
-//    }
     
     @Override
     protected void paintComponent(Graphics grphcs) {
@@ -303,17 +262,9 @@ public class GameEngine extends JPanel {
                 }
 
                 
-                if (/*isOver()*/over) {
+                if (over) {
                     System.out.println(points);
-//                    playerName.addActionListener(this);
-//                    public void actionPerformed(ActionEvent ace) {
-//                        String text = playerName.getText();
-//                        playerName.append(text + newline);
-//                        playerName.selectAll();
-//                    }
-                    //kiírni az eredményt+ elmenteni
                     restart();
-                    
                 }
             }
             repaint();
@@ -326,15 +277,5 @@ public class GameEngine extends JPanel {
 
     public void setPoints(int points) {
         this.points = points;
-    }
-
-//    public String getPlayer() {
-//        return player;
-//    }
-//
-//    public void setPlayer(String player) {
-//        this.player = player;
-//    }
-
-    
+    }    
 }
